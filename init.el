@@ -142,7 +142,7 @@
        ;;hy                ; readability of scheme w/ speed of python
        ;;idris             ; a language you can depend on
        json              ; At least it ain't XML
-       ;;(java +lsp)       ; the poster child for carpal tunnel syndrome
+       (java +lsp)       ; the poster child for carpal tunnel syndrome
        javascript        ; all(hope(abandon(ye(who(enter(here))))))
        ;;julia             ; a better, faster MATLAB
        ;;kotlin            ; a better, slicker Java(Script)
@@ -201,13 +201,27 @@
 (add-hook 'emacs-startup-hook 'treemacs)
 (add-hook 'doom-after-reload-hook 'treemacs)
 
+;; Modeline Thingy
+(setq
+        doom-modeline-buffer-name nil
+        doom-modeline-buffer-state-icon nil
+        doom-modeline-mu4e nil
+        doom-modeline-percent-position nil
+        doom-modeline-time-analogue-clock nil
+        doom-modeline-env-load-string nil
+        display-time-default-load-average nil
+)
+(display-battery-mode t)
+(display-time-mode t)
+(size-indication-mode nil)
+
 ;; Lisp Stuff
 (load (expand-file-name "~/.quicklisp/slime-helper.el"))
 (setq inferior-lisp-program "sbcl")
 
 ;; I want better C~
-(add-hook 'c-mode-hook (lambda () (setq flycheck-checker 'c/c++-gcc)))
-(add-hook 'c-mode-hook (lambda () (setq flycheck-gcc-language-standard "gnu17")))
+;; (add-hook 'c-mode-hook (lambda () (setq flycheck-checker 'c/c++-gcc)))
+;; (add-hook 'c-mode-hook (lambda () (setq flycheck-gcc-language-standard "gnu17")))
 
 (add-hook 'LaTeX-mode-hook 'prettify-symbols-mode)
 

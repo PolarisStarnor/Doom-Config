@@ -78,6 +78,7 @@
 ;; Requires
 
 (use-package! evil
+  :ensure t
    :config
    (evil-ex-define-cmd "q" 'kill-this-buffer)
    (evil-ex-define-cmd "wq" 'doom/save-and-kill-buffer)

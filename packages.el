@@ -52,5 +52,5 @@
 (package! rainbow-mode)
 (package! solaire-mode)
 (package! color-theme-modern)
-(package! flyspell-lazy)
 (package! xenops)
+(package! editorconfig)

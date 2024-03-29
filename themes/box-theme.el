@@ -1,9 +1,9 @@
 ;;; box-theme.el --- Box :D -*- lexical-binding: t; no-byte-compile: t; -*-
 ;;
-;; Added: May 23, 2016 (28620647f838)
-;; Author: Henrik Lissner <https://github.com/hlissner>
-;; Maintainer: Henrik Lissner <https://github.com/hlissner>
-;; Source: https://github.com/atom/one-dark-ui
+;; Created: March 29, 2024
+;; Author: Brett Liu <https://github.com/polarisstarnor>
+;; Maintainer: Brett Liu <https://github.com/polarisstarnor>
+;; Source: https://github.com/PolarisStarnor/Doom-Config
 ;;
 ;;; Commentary:
 ;;
@@ -113,7 +113,7 @@ Can be an integer to determine the exact padding."
    ;; These *must* be included in every doom themes, or your theme will throw an
    ;; error, as they are used in the base theme defined in doom-themes-base.
    (highlight      blue)
-   (vertical-bar   (doom-darken base6 0.1))
+   (vertical-bar   base6)
    (selection      dark-blue)
    (builtin        magenta)
    (comments       base4)
@@ -233,6 +233,15 @@ Can be an integer to determine the exact padding."
     :background modeline-bg-inactive-alt
     :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-inactive-alt)))
 
+    ;;;; vterm
+    (vterm-color-black   :background (doom-lighten base0 0.25)   :foreground base0)
+    (vterm-color-red     :background (doom-lighten red 0.25)     :foreground red)
+    (vterm-color-green   :background (doom-lighten green 0.25)   :foreground green)
+    (vterm-color-yellow  :background (doom-lighten yellow 0.25)  :foreground yellow)
+    (vterm-color-blue    :background (doom-lighten blue 0.25)    :foreground blue)
+    (vterm-color-magenta :background (doom-lighten magenta 0.25) :foreground magenta)
+    (vterm-color-cyan    :background (doom-lighten cyan 0.25)    :foreground cyan)
+    (vterm-color-white   :background (doom-lighten base8 0.25)   :foreground base8)
 
    ;;;; rainbow-delimiters
    (rainbow-delimiters-depth-1-face :foreground violet)
@@ -242,6 +251,22 @@ Can be an integer to determine the exact padding."
    (rainbow-delimiters-depth-5-face :foreground orange)
    (rainbow-delimiters-depth-6-face :foreground magenta)
    (rainbow-delimiters-depth-7-face :foreground cyan)
+
+    ;;;; treemacs
+    (treemacs-directory-face        :foreground blue)
+    (treemacs-file-face             :foreground fg)
+    (treemacs-fringe-indicator-face :foreground highlight)
+    (treemacs-git-added-face        :foreground vc-added)
+    (treemacs-git-conflict-face     :foreground red)
+    (treemacs-git-modified-face     :foreground violet)
+    (treemacs-git-untracked-face    :inherit 'font-lock-doc-face)
+    (treemacs-on-failure-pulse-face :foreground base0 :background error   :extend t)
+    (treemacs-on-success-pulse-face :foreground base0 :background success :extend t)
+    (treemacs-root-face             :foreground base7 :weight 'bold       :height 1.2)
+    (treemacs-tags-face             :foreground highlight)
+    ;;;; treemacs-nerd-icons
+    (treemacs-nerd-icons-file-face :foreground doc-comments)
+    (treemacs-nerd-icons-root-face :inherit 'font-lock-string-face :weight 'bold :height 1.2)
 
   )
 
