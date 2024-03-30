@@ -91,7 +91,7 @@
        ;;debugger          ; FIXME stepping through code, to help you add bugs
        ;;direnv
        ;;docker
-       ;;editorconfig      ; let someone else argue about tabs vs spaces
+       editorconfig      ; let someone else argue about tabs vs spaces
        ;;ein               ; tame Jupyter notebooks with emacs
        (eval +overlay)     ; run code, run (also, repls)
        ;;gist              ; interacting with github gists
@@ -185,7 +185,7 @@
        :app
        ;;calendar
        ;;emms
-       ;;everywhere        ; *leave* Emacs!? You must be joking
+       everywhere        ; *leave* Emacs!? You must be joking
        ;;irc               ; how neckbeards socialize
        ;;(rss +org)        ; emacs as an RSS reader
        twitter           ; twitter client https://twitter.com/vnought
@@ -194,6 +194,9 @@
        ;;literate
        (default +bindings +smartparens)
        (latex +latexmk))
+
+;; Pretty indents please
+(setq-default tab-width 8)
 
 ;; Tabs and treemacs
 (tab-bar-mode t)
@@ -206,6 +209,7 @@
         doom-modeline-buffer-name nil
         doom-modeline-buffer-state-icon nil
         doom-modeline-mu4e nil
+        doom-modeline-gnus nil
         doom-modeline-percent-position nil
         doom-modeline-time-analogue-clock nil
         doom-modeline-env-load-string nil
@@ -213,7 +217,8 @@
 )
 (display-battery-mode t)
 (display-time-mode t)
-(size-indication-mode nil)
+(size-indication-mode -1)
+
 
 ;; Lisp Stuff
 (load (expand-file-name "~/.quicklisp/slime-helper.el"))

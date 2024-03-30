@@ -156,7 +156,8 @@ Can be an integer to determine the exact padding."
   ;;;; Base theme face overrides
   (
 
-   (cursor :background blue)
+   (cursor :background violet
+	   :foreground red)
 
     ;;;; tab-line/tab-bar (Emacs 27+)
     (tab-line :background lime2 :foreground lime2 :height 1.05)

@@ -1,0 +1,20 @@
+# File on it's own does nothing in the doom config!
+# I link it to the directory where I store all my projects!
+
+root = true
+
+[*]
+indent_style = tab
+tab_width = 8
+end_of_line = lf
+insert_final_newline = true
+
+[*.{c,cpp,h,hpp}]
+indent_style = tab
+
+[*.{py,js}]
+indent_style = space
+indent_size = 8
+
+[Makefile]
+indent_style = tab
