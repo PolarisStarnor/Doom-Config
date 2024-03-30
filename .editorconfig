@@ -5,16 +5,17 @@ root = true
 
 [*]
 indent_style = tab
-tab_width = 8
+indent_size = 4
+tab_width = 4
 end_of_line = lf
 insert_final_newline = true
+
+[Makefile]
+indent_style = tab
 
 [*.{c,cpp,h,hpp}]
 indent_style = tab
 
 [*.{py,js}]
 indent_style = space
-indent_size = 8
 
-[Makefile]
-indent_style = tab
