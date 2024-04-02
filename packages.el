@@ -54,3 +54,4 @@
 (package! color-theme-modern)
 (package! xenops)
 (package! editorconfig)
+(package! lsp-python-ms)

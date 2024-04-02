@@ -162,6 +162,8 @@ Can be an integer to determine the exact padding."
 			:background box1
 			:foreground base4
 			)
+		((line-number &override) :foreground base5)
+		((line-number-current-line &override) :foreground fg)
 
     ;;;; tab-line/tab-bar (Emacs 27+)
 		(tab-line :background lime2 :foreground lime2 :height 0.95)
@@ -172,14 +174,12 @@ Can be an integer to determine the exact padding."
 		;; (tab-line-special )
 		(tab-line-highlight :inherit 'tab-line-tab)
 		(tab-line-close-highlight :foreground highlight)
-		(tab-line-tab-modified :foreground base4)
+		(tab-line-tab-modified :foreground base4 :weight 'bold :slant 'italic)
 		((tab-bar &inherit tab-line))
 		((tab-bar-tab &inherit tab-line-tab))
 		((tab-bar-tab-inactive &inherit tab-line-tab-inactive))
 
 		;; Defaults from doom-one theme I stole from
-		((line-number &override) :foreground base5)
-		((line-number-current-line &override) :foreground fg)
 		((font-lock-comment-face &override)
 			:background (if box-comment-bg (doom-lighten bg 0.05) 'unspecified))
 		(mode-line
