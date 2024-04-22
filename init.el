@@ -221,8 +221,8 @@
 
 
 ;; Lisp Stuff
-(load (expand-file-name "~/.quicklisp/slime-helper.el"))
-(setq inferior-lisp-program "sbcl")
+;;(load (expand-file-name "~/.quicklisp/slime-helper.el"))
+;;(setq inferior-lisp-program "sbcl")
 
 ;; I want better C~
 ;; (add-hook 'c-mode-hook (lambda () (setq flycheck-checker 'c/c++-gcc)))
@@ -236,3 +236,6 @@
 ;; file extension mapping
 (add-to-list 'auto-mode-alist '("\\.\\(pl\\|pro\\|lgt\\)" . prolog-mode))
 (add-to-list 'auto-mode-alist '("\\.g4" . antlr-mode))
+
+;; Share environment variables
+(when window-system (exec-path-from-shell-initialize))

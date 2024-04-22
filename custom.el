@@ -19,7 +19,7 @@
  '(flycheck-checker-error-threshold 800)
  '(magit-todos-insert-after '(bottom) nil nil "Changed by setter of obsolete option `magit-todos-insert-at'")
  '(package-selected-packages
-	  '(lsp-python-ms editorconfig xenops flyspell-correct flyspell-lazy color-theme-modern rainbow-mode twittering-mode all rustic flycheck-rust rust-mode rtags cpputils-cmake cmake-project cmake-mode cmake-ide ac-etags flylisp use-package bind bind-key auctex-latexmk markdown-preview-mode markdown-preview-eww latex-preview-pane obsidian pdf-tools auto-complete-auctex auctex cdlatex impatient-showdown org-latex-impatient impatient-mode magit git-commit flycheck-pycheckers flycheck-pyflakes pylint elpy python-mode flymake-python-pyflakes treemacs pyvenv vterm))
+	  '(exec-path-from-shell cargo treemacs-all-the-icons lsp-python-ms editorconfig xenops flyspell-correct flyspell-lazy color-theme-modern rainbow-mode twittering-mode all rustic flycheck-rust rust-mode rtags cpputils-cmake cmake-project cmake-mode cmake-ide ac-etags flylisp use-package bind bind-key auctex-latexmk markdown-preview-mode markdown-preview-eww latex-preview-pane obsidian pdf-tools auto-complete-auctex auctex cdlatex impatient-showdown org-latex-impatient impatient-mode magit git-commit flycheck-pycheckers flycheck-pyflakes pylint elpy python-mode flymake-python-pyflakes treemacs pyvenv vterm))
  '(send-mail-function 'mailclient-send-it))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

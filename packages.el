@@ -49,9 +49,13 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;; (unpin! t)
 
+(package! treemacs)
+(package! treemacs-all-the-icons)
 (package! rainbow-mode)
 (package! solaire-mode)
 (package! color-theme-modern)
 (package! xenops)
 (package! editorconfig)
 (package! lsp-python-ms)
+(package! vterm)
+(package! exec-path-from-shell)
