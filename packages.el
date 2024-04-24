@@ -59,3 +59,4 @@
 (package! lsp-python-ms)
 (package! vterm)
 (package! exec-path-from-shell)
+(package! graphviz-dot-mode)
