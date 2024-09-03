@@ -19,8 +19,9 @@
  '(flycheck-checker-error-threshold 800)
  '(magit-todos-insert-after '(bottom) nil nil "Changed by setter of obsolete option `magit-todos-insert-at'")
  '(package-selected-packages
-	  '(graphviz-dot-mode exec-path-from-shell cargo lsp-python-ms editorconfig xenops flyspell-correct flyspell-lazy color-theme-modern rainbow-mode twittering-mode all rustic flycheck-rust rust-mode rtags cpputils-cmake cmake-project cmake-mode cmake-ide ac-etags flylisp use-package bind bind-key auctex-latexmk markdown-preview-mode markdown-preview-eww latex-preview-pane obsidian pdf-tools auto-complete-auctex auctex cdlatex impatient-showdown org-latex-impatient impatient-mode magit git-commit flycheck-pycheckers flycheck-pyflakes pylint elpy python-mode flymake-python-pyflakes treemacs pyvenv vterm))
- '(send-mail-function 'mailclient-send-it))
+	  '(flymake-yaml yaml-mode handlebars-mode tide rjsx-mode gnu-elpa-keyring-update adoc-mode pkl-mode graphviz-dot-mode exec-path-from-shell cargo lsp-python-ms editorconfig xenops flyspell-correct flyspell-lazy color-theme-modern rainbow-mode twittering-mode all rustic flycheck-rust rust-mode rtags cpputils-cmake cmake-project cmake-mode cmake-ide ac-etags flylisp use-package bind bind-key auctex-latexmk markdown-preview-mode markdown-preview-eww latex-preview-pane obsidian pdf-tools auto-complete-auctex auctex cdlatex impatient-showdown org-latex-impatient impatient-mode magit git-commit flycheck-pycheckers flycheck-pyflakes pylint elpy python-mode flymake-python-pyflakes treemacs pyvenv vterm))
+ '(send-mail-function 'mailclient-send-it)
+ '(warning-suppress-types '((color-theme) (defvaralias))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

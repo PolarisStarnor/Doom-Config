@@ -16,6 +16,10 @@ indent_style = tab
 [*.{c,cpp,h,hpp}]
 indent_style = tab
 
-[*.{py,js}]
-indent_style = space
+[*.mjs]
+indent_style = tab
+tab_width = 4
 
+[*.json]
+indent_style = tab
+tab_width = 2

@@ -49,6 +49,11 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;; (unpin! t)
 
+(add-to-list 'package-archives
+         '("gnu" . "https://elpa.gnu.org/packages/"))
+(add-to-list 'package-archives
+         '("melpa" . "https://melpa.org/packages/"))
+
 (package! treemacs)
 (package! treemacs-all-the-icons)
 (package! rainbow-mode)
@@ -60,3 +65,12 @@
 (package! vterm)
 (package! exec-path-from-shell)
 (package! graphviz-dot-mode)
+(package! pkl-mode)
+(package! gnu-elpa-keyring-update)
+(package! adoc-mode)
+(package! editorconfig)
+(package! rjsx-mode)
+(package! tide)
+(package! elgrep)
+(package! handlebars-mode)
+(package! magit)

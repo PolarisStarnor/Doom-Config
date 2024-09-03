@@ -90,7 +90,7 @@
        ;;collab            ; buffers with friends
        ;;debugger          ; FIXME stepping through code, to help you add bugs
        ;;direnv
-       ;;docker
+       docker
        editorconfig      ; let someone else argue about tabs vs spaces
        ;;ein               ; tame Jupyter notebooks with emacs
        (eval +overlay)     ; run code, run (also, repls)
@@ -173,8 +173,8 @@
        ;;solidity          ; do you need a blockchain? No.
        ;;swift             ; who asked for emoji variables?
        ;;terra             ; Earth and Moon in alignment for performance.
-       ;;web               ; the tubes
-       ;;yaml              ; JSON, but readable
+       web               ; the tubes
+       yaml              ; JSON, but readable
        ;;zig               ; C, but simpler
 
        :email
@@ -196,7 +196,11 @@
        (latex +latexmk))
 
 ;; Pretty indents please
-(setq-default tab-width 8)
+(setq-default tab-width 4)
+
+;;Line numbers
+(add-hook 'prog-mode-hook 'display-line-numbers-mode)
+(add-hook 'handlebars-mode-hook 'display-line-numbers-mode)
 
 ;; Tabs and treemacs
 (tab-bar-mode t)
@@ -237,6 +241,8 @@
 (add-to-list 'auto-mode-alist '("\\.\\(pl\\|pro\\|lgt\\)" . prolog-mode))
 (add-to-list 'auto-mode-alist '("\\.g4" . antlr-mode))
 (add-to-list 'auto-mode-alist '("\\.dot" . graphviz-dot-mode))
+(add-to-list 'auto-mode-alist '("\\.pkl" . pkl-mode))
+(add-to-list 'auto-mode-alist '("\\.adoc" . adoc-mode))
 
 ;; Dot preview
 (add-hook 'graphviz-dot-mode 'graphviz-turn-on-live-preview)

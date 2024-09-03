@@ -77,6 +77,8 @@
 
 ;; Requires
 
+(setq tab-line-new-button-show nil)
+
 (use-package! evil
   :ensure t
    :config
@@ -92,6 +94,7 @@
         "<up>"          #'windmove-up
         "<down>"        #'windmove-down
         "RET"           #'treemacs
+		"r"			#'rgrep
 )
 
 (map! :after 'pdf-view
