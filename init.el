@@ -195,16 +195,16 @@
        (default +bindings +smartparens)
        (latex +latexmk))
 
-;; Pretty indents please
-(setq-default tab-width 4)
+(setenv "WORKON_HOME" "/home/pola/Coding/.virtualenvs")
 
 ;;Line numbers
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 (add-hook 'handlebars-mode-hook 'display-line-numbers-mode)
 
 ;; Tabs and treemacs
-(tab-bar-mode t)
-(global-tab-line-mode t)
+;(tab-bar-mode t)
+;(global-tab-line-mode t)
+(add-hook 'server-after-make-frame-hook 'centaur-tabs-mode)
 (add-hook 'emacs-startup-hook 'treemacs)
 (add-hook 'doom-after-reload-hook 'treemacs)
 

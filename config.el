@@ -78,6 +78,13 @@
 ;; Requires
 
 (setq tab-line-new-button-show nil)
+(setq-default tab-width 4)
+
+(setq centaur-tabs-style "box")
+(setq centaur-tabs-set-icons t)
+(setq centaur-tabs-gray-out-icons 'buffer)
+(after! centaur-tabs (centaur-tabs-group-by-projectile-project))
+
 
 (use-package! evil
   :ensure t
@@ -86,6 +93,13 @@
    (evil-ex-define-cmd "wq" 'doom/save-and-kill-buffer)
    (evil-ex-define-cmd "c" 'quit-window)
 )
+
+(map!	:prefix "C-x"
+		:map 'override
+			"<left>"	#'centaur-tabs-backward
+			"<right>"	#'centaur-tabs-forward
+			"<up>"		#'centaur-tabs-forward-group
+			"<down>"	#'centaur-tabs-backward-group)
 
 (map! :prefix "C-c"
       :map 'override
