@@ -61,6 +61,7 @@
 (package! color-theme-modern)
 (package! xenops)
 (package! editorconfig)
+(package! lsp-ui)
 (package! lsp-python-ms)
 (package! vterm)
 (package! exec-path-from-shell)
@@ -74,3 +75,5 @@
 (package! elgrep)
 (package! handlebars-mode)
 (package! magit)
+(package! doom-themes)
+(package! all-the-icons)

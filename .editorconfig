@@ -24,10 +24,6 @@ tab_width = 2
 [*.{c,cpp,h,hpp}]
 indent_style = tab
 
-[*.mjs]
-indent_style = tab
-tab_width = 4
-
 [*.json]
 indent_style = tab
 tab_width = 4

@@ -36,7 +36,7 @@
 	:type 'boolean)
 
 (defcustom box-padded-modeline doom-themes-padded-modeline
-	"If non-nil, adds a 4px padding to the mode-line.
+	"If non-nil,adds a4px padding to the mode-line.
 Can be an integer to determine the exact padding."
 	:group 'box-theme
 	:type '(choice integer boolean))
@@ -232,6 +232,7 @@ Can be an integer to determine the exact padding."
 		(solaire-mode-line-face
 			:inherit 'mode-line
 			:background modeline-bg-alt
+            :region lime2
 			:box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-alt)))
 		(solaire-mode-line-inactive-face
 			:inherit 'mode-line-inactive
@@ -247,6 +248,11 @@ Can be an integer to determine the exact padding."
 		(vterm-color-magenta :background (doom-lighten magenta 0.25) :foreground magenta)
 		(vterm-color-cyan    :background (doom-lighten cyan 0.25)    :foreground cyan)
 		(vterm-color-white   :background (doom-lighten base8 0.25)   :foreground base8)
+
+   ;;;; Flycheck stuff
+        (lsp-flycheck-error-unnecessary-face
+            :foreground lime2
+            :underline lime0)
 
    ;;;; rainbow-delimiters
 		(rainbow-delimiters-depth-1-face :foreground violet)

@@ -75,17 +75,22 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-;; Requires
-
+;; Treemacs Themes
+(with-eval-after-load 'doom-themes
+  (doom-themes-treemacs-config))
+(with-eval-after-load 'doom-themes
+  (doom-themes-neotree-config))
+;; Indents are weird
 (setq tab-line-new-button-show nil)
 (setq-default tab-width 4)
 
+;; Tabs look nice
 (setq centaur-tabs-style "box")
 (setq centaur-tabs-set-icons t)
 (setq centaur-tabs-gray-out-icons 'buffer)
 (after! centaur-tabs (centaur-tabs-group-by-projectile-project))
 
-
+;; Extra vim stuff I like
 (use-package! evil
   :ensure t
    :config
@@ -101,6 +106,13 @@
 			"<up>"		#'centaur-tabs-forward-group
 			"<down>"	#'centaur-tabs-backward-group)
 
+;; (evil-define-key* 'normal python-mode-map "SPC p v" #'pyvenv-workon)
+(map!   :map 'python-mode-map
+        :leader
+            "p v"   #'pyvenv-workon
+)
+
+;; Windmove movement
 (map! :prefix "C-c"
       :map 'override
         "<left>"        #'windmove-left
