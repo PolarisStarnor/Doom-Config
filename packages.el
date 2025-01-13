@@ -63,6 +63,8 @@
 (package! editorconfig)
 (package! lsp-ui)
 (package! lsp-python-ms)
+(package! pylint)
+(package! lsp-jedi)
 (package! vterm)
 (package! exec-path-from-shell)
 (package! graphviz-dot-mode)
@@ -77,3 +79,4 @@
 (package! magit)
 (package! doom-themes)
 (package! all-the-icons)
+(package! emacs-everywhere)

@@ -40,7 +40,7 @@
        minimap           ; show a map of the code on the side
        modeline          ; snazzy, Atom-inspired modeline, plus API
        ;;nav-flash         ; blink cursor line after big motions
-       neotree           ; a project drawer, like NERDTree for vim
+       ;;neotree           ; a project drawer, like NERDTree for vim
        ophints           ; highlight the region an operation acts on
        (popup +defaults)   ; tame sudden yet inevitable temporary windows
        tabs              ; a tab bar for Emacs
@@ -158,7 +158,7 @@
        ;;php               ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more
        ;;purescript        ; javascript, but functional
-       (python +lsp)            ; beautiful is better than ugly
+       (python +lsp +pyenv)            ; beautiful is better than ugly
        ;;qt                ; the 'cutest' gui framework ever
        ;;racket            ; a DSL for DSLs
        ;;raku              ; the artist formerly known as perl6
@@ -199,6 +199,7 @@
 
 ;;Line numbers
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
+(add-hook 'prog-mode-hook 'hs-minor-mode)
 (add-hook 'handlebars-mode-hook 'display-line-numbers-mode)
 
 ;; Tabs and treemacs
@@ -249,3 +250,6 @@
 
 ;; Share environment variables
 (when window-system (exec-path-from-shell-initialize))
+
+;; Maybe fixes flycheck theme?
+(add-hook 'lsp-diagnostics-mode-on-hook (lambda () (setq lsp-diagnostics-attributes nil)))

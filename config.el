@@ -92,7 +92,6 @@
 
 ;; Extra vim stuff I like
 (use-package! evil
-  :ensure t
    :config
    (evil-ex-define-cmd "q" 'kill-this-buffer)
    (evil-ex-define-cmd "wq" 'doom/save-and-kill-buffer)
@@ -137,3 +136,5 @@
 ;;             (if (derived-mode-p 'c-mode 'c++-mode)
 ;;                 (cppcm-reload-all)
 ;;               )))
+
+;;(lsp-treemacs-sync-mode 1)
