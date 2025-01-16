@@ -149,10 +149,10 @@
        latex             ; writing papers in Emacs has never been so fun
        ;;lean              ; for folks with too much to prove
        ;;ledger            ; be audit you can be
-       ;;lua               ; one-based indices? one-based indices
+       lua               ; one-based indices? one-based indices
        markdown          ; writing docs for people to ignore
        ;;nim               ; python + lisp at the speed of c
-       ;;nix               ; I hereby declare "nix geht mehr!"
+       nix               ; I hereby declare "nix geht mehr!"
        ;;ocaml             ; an objective camel
        org               ; organize your plain life in plain text
        ;;php               ; perl's insecure younger brother
@@ -200,7 +200,7 @@
 ;;Line numbers
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 (add-hook 'prog-mode-hook 'hs-minor-mode)
-(add-hook 'handlebars-mode-hook 'display-line-numbers-mode)
+(setq display-line-numbers 'relative)
 
 ;; Tabs and treemacs
 ;(tab-bar-mode t)
@@ -208,6 +208,7 @@
 (add-hook 'server-after-make-frame-hook 'centaur-tabs-mode)
 (add-hook 'emacs-startup-hook 'treemacs)
 (add-hook 'doom-after-reload-hook 'treemacs)
+(add-hook 'workspace-load-hook 'treemacs)
 
 ;; Modeline Thingy
 (setq
