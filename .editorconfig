@@ -12,7 +12,6 @@ insert_final_newline = true
 
 [*.py]
 indent_style = space
-tab_width = 4
 
 [Makefile]
 indent_style = tab
@@ -20,11 +19,10 @@ indent_style = tab
 [*.hbs]
 indent_style = space
 tab_width = 2
+indent_size = 2
 
 [*.{c,cpp,h,hpp}]
 indent_style = space
-tab_width = 2
 
 [*.json]
 indent_style = tab
-tab_width = 4
