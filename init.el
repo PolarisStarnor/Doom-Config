@@ -202,6 +202,15 @@
 (add-hook 'prog-mode-hook 'hs-minor-mode)
 (setq display-line-numbers 'relative)
 
+;;Editorconfig Stuff
+(setq lsp-enable-indentation nil)
+(add-hook 'editorconfig-after-apply-functions
+    (lambda (props) (setq web-mode-block-padding 0)))
+(after! editorconfig
+    (add-to-list 'editorconfig-indentation-alist '(coffee-mode coffee-tab-width))
+    (add-to-list 'editorconfig-indentation-alist '(evil-mode evil-shift-width))
+    (add-to-list 'editorconfig-indentation-alist '(c-mode c-basic-offset)))
+
 ;; Tabs and treemacs
 ;(tab-bar-mode t)
 ;(global-tab-line-mode t)
