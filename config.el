@@ -106,9 +106,11 @@
 			"<down>"	#'centaur-tabs-backward-group)
 
 ;; (evil-define-key* 'normal python-mode-map "SPC p v" #'pyvenv-workon)
+;; HACK python-mode-map reference doesn't actually work
 (map!   :map 'python-mode-map
         :leader
             "p v"   #'pyvenv-workon
+            "p c"   #'pyvenv-create
 )
 
 ;; Windmove movement
