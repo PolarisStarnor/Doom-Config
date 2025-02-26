@@ -232,24 +232,27 @@ Can be an integer to determine the exact padding."
 		(solaire-mode-line-face
 			:inherit 'mode-line
 			:background modeline-bg-alt
+            :foreground lime5
             :region lime2
 			:box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-alt)))
 		(solaire-mode-line-inactive-face
 			:inherit 'mode-line-inactive
+            :foreground lime5
 			:background modeline-bg-inactive-alt
 			:box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-inactive-alt)))
 
     ;;;; vterm
-		(vterm-color-black   :background (doom-lighten base0 0.25)   :foreground base0)
-		(vterm-color-red     :background (doom-lighten red 0.25)     :foreground red)
-		(vterm-color-green   :background (doom-lighten green 0.25)   :foreground green)
-		(vterm-color-yellow  :background (doom-lighten yellow 0.25)  :foreground yellow)
-		(vterm-color-blue    :background (doom-lighten blue 0.25)    :foreground blue)
-		(vterm-color-magenta :background (doom-lighten magenta 0.25) :foreground magenta)
-		(vterm-color-cyan    :background (doom-lighten cyan 0.25)    :foreground cyan)
-		(vterm-color-white   :background (doom-lighten base8 0.25)   :foreground base8)
+		(vterm-color-black   :background (doom-darken base0 0.25)   :foreground base0)
+		(vterm-color-red     :background (doom-darken red 0.25)     :foreground red)
+		(vterm-color-green   :background (doom-darken green 0.25)   :foreground green)
+		(vterm-color-yellow  :background (doom-darken yellow 0.25)  :foreground yellow)
+		(vterm-color-blue    :background (doom-darken blue 0.25)    :foreground blue)
+		(vterm-color-magenta :background (doom-darken magenta 0.25) :foreground magenta)
+		(vterm-color-cyan    :background (doom-darken cyan 0.25)    :foreground cyan)
+		(vterm-color-white   :background (doom-darken base8 0.25)   :foreground base8)
 
    ;;;; Flycheck stuff
+   ;;;; NOTE need to refresh theme to use changes
         (lsp-flycheck-error-unnecessary-face
             :foreground lime2
             :underline lime0)
