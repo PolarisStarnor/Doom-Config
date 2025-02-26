@@ -121,7 +121,7 @@
        ;;common-lisp       ; if you've seen one lisp, you've seen them all
        ;;coq               ; proofs-as-programs
        ;;crystal           ; ruby at the speed of c
-       ;;csharp            ; unity, .NET, and mono shenanigans
+       csharp            ; unity, .NET, and mono shenanigans
        ;;data              ; config/data formats
        ;;(dart +flutter)   ; paint ui and not much else
        ;;dhall
@@ -254,6 +254,7 @@
 (add-to-list 'auto-mode-alist '("\\.dot" . graphviz-dot-mode))
 (add-to-list 'auto-mode-alist '("\\.pkl" . pkl-mode))
 (add-to-list 'auto-mode-alist '("\\.adoc" . adoc-mode))
+(add-to-list 'auto-mode-alist '("justfile" . makefile-mode))
 
 ;; Dot preview
 (add-hook 'graphviz-dot-mode 'graphviz-turn-on-live-preview)
