@@ -243,6 +243,9 @@
 ;; (add-hook 'c-mode-hook (lambda () (setq flycheck-checker 'c/c++-gcc)))
 ;; (add-hook 'c-mode-hook (lambda () (setq flycheck-gcc-language-standard "gnu17")))
 
+;; Org latex
+(add-hook 'org-mode-hook 'org-latex-preview-auto-mode)
+
 (add-hook 'LaTeX-mode-hook 'prettify-symbols-mode)
 
 ;; use pdf-tools by default
