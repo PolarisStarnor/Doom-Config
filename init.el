@@ -254,6 +254,7 @@
 ;; file extension mapping
 (add-to-list 'auto-mode-alist '("\\.\\(pl\\|pro\\|lgt\\)" . prolog-mode))
 (add-to-list 'auto-mode-alist '("\\.g4" . antlr-mode))
+(add-to-list 'auto-mode-alist '("\\.cs" . lsp-mode))
 (add-to-list 'auto-mode-alist '("\\.dot" . graphviz-dot-mode))
 (add-to-list 'auto-mode-alist '("\\.pkl" . pkl-mode))
 (add-to-list 'auto-mode-alist '("\\.adoc" . adoc-mode))
