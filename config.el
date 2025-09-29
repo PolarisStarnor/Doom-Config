@@ -93,7 +93,7 @@
 ;; Extra vim stuff I like
 (use-package! evil
    :config
-   (evil-ex-define-cmd "q" 'kill-this-buffer)
+   (evil-ex-define-cmd "q" 'doom/kill-this-buffer-in-all-windows)
    (evil-ex-define-cmd "wq" 'doom/save-and-kill-buffer)
    (evil-ex-define-cmd "c" 'quit-window)
 )
